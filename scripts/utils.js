@@ -14,13 +14,15 @@ function countPopulation() {
 	}
 
 	document.getElementById("population").innerHTML = "Population: " + population;
+	
+	var populationElmnt = document.getElementById("population");
 
 	if(population < lastPopulation) {
-		document.getElementById("population").style.color = "#fdb4cf";
+		populationElmnt.style.color = "#fdb4cf";
 	} else if(population == lastPopulation) {
-		document.getElementById("population").style.color = "#dbdcd6";
+		populationElmnt.style.color = "#dbdcd6";
 	} else if(population > lastPopulation) {
-		document.getElementById("population").style.color = "#e2f6bc";
+		populationElmnt.style.color = "#e2f6bc";
 	}
 
 	lastPopulation = population;
