@@ -1,10 +1,10 @@
-body {
+body{
 	font-family: Helvetica, Arial, Sans-Serif;
 	background-color: #36372f;
 	color: white;
 }
 
-button {
+button{
 	padding: 5px;
 	padding-bottom: 2px;
 	background-color: #5e6052;
@@ -33,6 +33,6 @@ button:active{
 	border-bottom: 2px solid #1a1c17;
 }
 
-#canvas {
+#canvas{
 	cursor: url('pipette.png') 1 14, default; /*Icon from http://p.yusukekamiyamane.com available under a Creative Commons Attribution 3.0 License*/
 }
