@@ -1,0 +1,38 @@
+body {
+	font-family: Helvetica, Arial, Sans-Serif;
+	background-color: #36372f;
+	color: white;
+}
+
+button {
+	padding: 5px;
+	padding-bottom: 2px;
+	background-color: #5e6052;
+	color: white;
+	border: 1px solid #282923;
+	border-bottom: 3px solid #1b1c17;
+	-webkit-transition: background-color .2s;
+	transition: background-color .2s;
+	-o-box-shadow: inset 0px 0px 0px 1px #7d7d7d;
+	box-shadow: inset 0px 0px 0px 1px #7d7d7d;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#7d7d7d, Direction=NaN, Strength=1);
+	border-radius: 2px;
+
+	outline: none;
+}
+
+button:hover{
+	background-color: #797c6a;
+	padding-bottom: 1px;
+	border-bottom: 4px solid #292a22;
+}
+
+button:active{
+	background-color: #282923;
+	padding-bottom: 3px;
+	border-bottom: 2px solid #1a1c17;
+}
+
+#canvas {
+	cursor: url('pipette.png') 1 14, default; /*Icon from http://p.yusukekamiyamane.com available under a Creative Commons Attribution 3.0 License*/
+}
