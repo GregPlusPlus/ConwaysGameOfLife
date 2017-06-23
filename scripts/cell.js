@@ -1,13 +1,15 @@
+// This class represents a cell according to his coordinates, and his living probability
 function Cell(r, c, p) {
-	var self = this;
+	// Initializing properties
 	this.row = r;
 	this.column = c;
 	this.alive = (Math.random() < p);
 	this.wasAlive = false;
 	this.neighbors = 0;
 
+	//This function shows the cell into the canvas according to his coordinates, and his living state
 	Cell.prototype.show = function() {
-		if(this.alive && this.wasAlive)
+		if(this.alive && this.wasAlive) // The cell stays alive
 		{
 			ctx.beginPath();
 			ctx.lineWidth = "1";
@@ -16,7 +18,7 @@ function Cell(r, c, p) {
 			ctx.rect(this.column * 10, this.row * 10, 10, 10);
 			ctx.stroke();
 			ctx.fill();
-		} else if(this.alive && !this.wasAlive) {
+		} else if(this.alive && !this.wasAlive) { // The cell borns
 			ctx.beginPath();
 			ctx.lineWidth = "1";
 			ctx.strokeStyle = "#272822";
@@ -24,7 +26,7 @@ function Cell(r, c, p) {
 			ctx.rect(this.column * 10, this.row * 10, 10, 10);
 			ctx.stroke();
 			ctx.fill();
-		} else if(!this.alive && this.wasAlive) {
+		} else if(!this.alive && this.wasAlive) { // The cell dies
 			ctx.beginPath();
 			ctx.lineWidth = "1";
 			ctx.strokeStyle = "#272822";
@@ -32,7 +34,7 @@ function Cell(r, c, p) {
 			ctx.rect(this.column * 10, this.row * 10, 10, 10);
 			ctx.stroke();
 			ctx.fill();
-		} else {
+		} else { // The cell stays die
 			ctx.beginPath();
 			ctx.lineWidth = "1";
 			ctx.strokeStyle = "#272822";
@@ -42,9 +44,10 @@ function Cell(r, c, p) {
 			ctx.fill();
 		}
 
-		this.showNeighborsCount();
+		this.showNeighborsCount(); // Display ne number of neighbors
 	}
 
+	//This function displays the number of neighbors
 	Cell.prototype.showNeighborsCount = function() {
 		ctx.fillStyle = "#5d6052";
 		ctx.font = "10px Arial";
