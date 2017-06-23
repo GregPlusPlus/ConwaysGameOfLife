@@ -12,8 +12,8 @@ function Cell(r, c, p) {
 		ctx.beginPath();
 		ctx.lineWidth = "1";
 		
-		if(this.alive && this.wasAlive) 		// The cell stays alive
-		{
+		// Changing the cell's color according to his living state
+		if(this.alive && this.wasAlive) {		// The cell stays alive
 			ctx.strokeStyle = "#272822";
 			ctx.fillStyle = "#FD971F";
 		} else if(this.alive && !this.wasAlive) { 	// The cell borns
@@ -22,14 +22,14 @@ function Cell(r, c, p) {
 		} else if(!this.alive && this.wasAlive) { 	// The cell dies
 			ctx.strokeStyle = "#272822";
 			ctx.fillStyle = "#66D9EF";
-		} else { 					// The cell stays ded
+		} else { 					// The cell stays dead
 			ctx.strokeStyle = "#272822";
 			ctx.fillStyle = "#272822";
 		}
 		
-		ctx.rect(this.column * 10, this.row * 10, 10, 10);
-		ctx.stroke();
-		ctx.fill();
+		ctx.rect(this.column * 10, this.row * 10, 10, 10);	// |
+		ctx.stroke();						// |- Drawing the cell
+		ctx.fill();						// |
 
 		this.showNeighborsCount(); // Display ne number of neighbors
 	}
